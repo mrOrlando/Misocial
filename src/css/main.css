@@ -70,8 +70,48 @@ body {
   align-items: center;
 }
 
+.m-menu-link {
+  display: none;
+  color: #fff;
+  font-size: 3.5rem;
+}
+
+.m-menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  line-height: 6rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #6e45e2;
+  z-index: 1001;
+  margin: 0;
+  transition: 0.2s;
+  transform: translateX(100%);
+}
+
+.m-menu__active {
+  transform: translateX(0);
+}
+
+.close-menu {
+  position: fixed;
+  right: 25px;
+  top: 10px;
+  margin: 0;
+  color: #fff;
+  font-size: 6rem;
+  cursor: pointer;
+}
+
 .menu {
-  width: 45%;
+  width: 60%;
   font-size: 1.6rem;
 }
 
@@ -289,7 +329,7 @@ body {
   box-shadow: 0px 0px 18.69px 2.31px rgba(204, 204, 223, 0.5);
   transition: all 0.3s;
   display: inline-block;
-  margin: 0 1rem;
+  margin: 1rem;
 }
 
 .call-to-action button:hover {

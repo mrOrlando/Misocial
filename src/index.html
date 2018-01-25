@@ -9,16 +9,47 @@
   <link rel="stylesheet" href="../node_modules/normalizecss/normalize.css">
   <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
+  <script src="../node_modules/jquery/dist/jquery.min.js" defer="defer"></script>
+  <script src="scripts/main.js" defer="defer"></script>
   <title>Pricing</title>
 </head>
 
 <body>
+
+  <ul class="m-menu">
+    <li>
+      <div class="close-menu">&times;</div>
+    </li>
+    <li>
+      <a class="menu-link" href="#">Home</a>
+    </li>
+    <li>
+      <a class="menu-link" href="#">Why MISOCIAL</a>
+    </li>
+    <li>
+      <a class="menu-link" href="#">Features</a>
+    </li>
+    <li>
+      <a class="menu-link" href="#">Articles</a>
+    </li>
+    <li>
+      <a class="menu-link" href="#">Pricing</a>
+    </li>
+    <li>
+      <a class="menu-link get-started-button" href="#">Get Started</a>
+    </li>
+  </ul>
+
   <div class="main">
     <header class="main-header">
       <div class="logo">
         <img src="img/logo.png" alt="Misocial">
       </div>
-      <div class="menu">
+      <a href="#" class="m-menu-link">
+        <i class="fa fa-bars"></i>
+      </a>
+      <div class="menu visible-lg">
         <ul>
           <li>
             <a class="menu-link" href="#">Home</a>

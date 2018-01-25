@@ -1,0 +1,46 @@
+@media (max-width: 1199px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 11px;
+  }
+
+  .visible-lg {
+    display: none;
+  }
+
+  .m-menu-link {
+    display: block;
+  }
+
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-cards .card {
+    width: 90%;
+    margin: 2rem auto;
+  }
+
+  .footer-menu {
+    display: none;
+  }
+
+  .footer .row {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .footer .social-links {
+    margin: 2rem;
+  }
+
+  .footer .social-links a {
+    font-size: 2.6rem;
+  }
+}
