@@ -4,6 +4,7 @@ var mainNpmFiles = require('gulp-main-npm-files');
 var sourcemaps = require('gulp-sourcemaps');
 var stylus = require('gulp-stylus');
 var pug = require('gulp-pug');
+var notify = require('gulp-notify');
 
 gulp.task('styl', function() {
   gulp
@@ -22,6 +23,7 @@ gulp.task('pug', function() {
         pretty: true,
       }),
     )
+    .on('error', notify.onError())
     .pipe(gulp.dest('build'));
 });
 
