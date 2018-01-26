@@ -9,7 +9,11 @@
     "normalizecss": "^3.0.0"
   },
   "devDependencies": {
+    "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-main-npm-files": "^1.0.5",
+    "gulp-pug": "^3.3.0",
     "gulp-sourcemaps": "^1.12.1",
     "gulp-stylus": "^2.7.0"
   }
