@@ -1,0 +1,17 @@
+mixin menu(isMobileVersion)
+  ul.menu(class=attributes.class)
+    if isMobileVersion
+      li.menu__item
+        a.menu__link.menu__link_type_close(href="#") &times;
+    li.menu__item
+      a.menu__link(href="#") Home
+    li.menu__item
+      a.menu__link(href="#") Why MISOCIAL
+    li.menu__item
+      a.menu__link(href="#") Features
+    li.menu__item
+      a.menu__link(href="#") Articles
+    li.menu__item
+      a.menu__link(href="#") Pricing
+    li.menu__item
+      a.menu__link.menu__link_type_button(href="#") Get Started

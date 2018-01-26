@@ -11,6 +11,7 @@ gulp.task('styl', function() {
     .src('./src/stylus/app.styl')
     .pipe(sourcemaps.init())
     .pipe(stylus({ include: 'node_modules' }))
+    .on('error', notify.onError())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./build/css'));
 });
@@ -21,7 +22,7 @@ gulp.task('pug', function() {
     .pipe(
       pug({
         pretty: true,
-      }),
+      })
     )
     .on('error', notify.onError())
     .pipe(gulp.dest('build'));

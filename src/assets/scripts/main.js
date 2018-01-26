@@ -1,19 +1,19 @@
 $(function() {
+  var menu = $('.menu_platform_mobile');
   var link = $('.m-menu-link');
-  var menu = $('.m-menu');
-  var close = $('.close-menu');
+  var close = $('.menu__link_type_close', menu);
 
   link.on('click', function(event) {
     event.preventDefault();
-    menu.toggleClass('m-menu__active');
+    menu.addClass('menu_active');
   });
 
   close.on('click', function(event) {
     event.preventDefault();
-    menu.toggleClass('m-menu__active');
+    menu.removeClass('menu_active');
   });
 
   $('a', menu).click(function() {
-    menu.toggleClass('m-menu__active');
+    menu.removeClass('menu_active');
   });
 });

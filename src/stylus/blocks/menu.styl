@@ -1,4 +1,58 @@
+@import "../common/variables"
+@import "../common/mixins"
+
 .menu
+  font-size 1.6rem
   list-style none
-  &__item
+  display flex
+  justify-content space-between
+  &__link
     text-decoration none
+    color menu-dark-color
+    &_type
+      &_button
+        button()
+      &_close
+        position fixed
+        right 25px
+        top 10px
+        margin 0
+        color #fff
+        font-size 6rem
+        cursor pointer
+  &_theme
+    &_light
+      .menu
+        &__link
+          color menu-light-color
+          &_type_button
+            border 1px solid #fff
+            background none
+    &_dark
+      .menu
+        &__link
+          color menu-dark-color
+          &_type_button
+            color #fff
+            background bg-purple
+  &_platform
+    &_mobile
+      position fixed
+      right 0
+      top 0
+      height 100vh
+      width 100%
+      text-align center
+      font-size 3rem
+      line-height 6rem
+      list-style none
+      display flex
+      flex-direction column
+      justify-content center
+      background bg-purple
+      z-index 1001
+      margin 0
+      transition 0.2s
+      transform translateX(100%)
+  &_active
+    transform translateX(0)

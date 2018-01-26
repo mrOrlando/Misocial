@@ -1,45 +1,19 @@
 extends ../layout/main
+include ../blocks/menu
 
 block title
   | Pricing
 
 block body
-  ul.m-menu
-    li
-      .close-menu &times;
-    li
-      a(class="menu-link" href="#") Home
-    li
-      a(class="menu-link" href="#") Why MISOCIAL
-    li
-      a(class="menu-link" href="#") Features
-    li
-      a(class="menu-link" href="#") Articles
-    li
-      a(class="menu-link" href="#") Pricing
-    li
-      a(class="menu-link get-started-button" href="#") Get Started
-
+  +menu(true)(class='menu_theme_light menu_platform_mobile')
   .main
     header.main-header
       .logo
         img(src="img/logo.png" alt="Misocial")
       a(href="#" class="m-menu-link")
         i.fa.fa-bars
-      .menu.visible-lg
-        ul
-          li
-            a(class="menu-link" href="#") Home
-          li
-            a(class="menu-link" href="#") Why MISOCIAL
-          li
-            a(class="menu-link" href="#") Features
-          li
-            a(class="menu-link" href="#") Articles
-          li
-            a(class="menu-link" href="#") Pricing
-          li
-            a(class="menu-link get-started-button" href="#") Get Started
+      .visible-lg
+        +menu()(class='menu_theme_light')
     .main-text
       span.subtitle Social marketing & analytics
       h1 Pricing Table
@@ -101,19 +75,7 @@ block body
         .logo
           img(src="img/logo-black.png" alt="Misocial")
         .footer-menu
-          ul
-            li
-              a(class="footer-menu-link" href="#") Home
-            li
-              a(class="footer-menu-link" href="#") Why MISOCIAL
-            li
-              a(class="footer-menu-link" href="#") Features
-            li
-              a(class="footer-menu-link" href="#") Articles
-            li
-              a(class="footer-menu-link" href="#") Pricing
-            li
-              a(class="footer-menu-link footer-get-started" href="#") Get Started
+          +menu()(class="menu_theme_dark")
       .line
       .row
         p.copy © 2017 Mass Impressions & Tranmautritam. Make the right impression.
