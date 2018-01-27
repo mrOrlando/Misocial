@@ -1,0 +1,5 @@
+mixin header-text(title, subtitle, text, titleLevel)
+    .header-text(class=attributes.class)
+      span.subtitle.header-text__subtitle= subtitle
+      #{titleLevel}.header-text__title= title
+      p.header-text__text= text

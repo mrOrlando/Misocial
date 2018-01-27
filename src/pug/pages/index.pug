@@ -1,5 +1,6 @@
 extends ../layout/main
 include ../blocks/menu
+include ../blocks/header-text
 
 block title
   | Pricing
@@ -7,27 +8,31 @@ block title
 block body
   +menu(true)(class='menu_theme_light menu_platform_mobile')
   .main
-    header.main-header
-      .logo
+    header.main__header
+      .main__logo
         img(src="img/logo.png" alt="Misocial")
-      a(href="#" class="m-menu-link")
+      a(href="#" class="main__menu-link")
         i.fa.fa-bars
-      .visible-lg
+      .main__menu_wrapper
         +menu()(class='menu_theme_light')
-    .main-text
-      span.subtitle Social marketing & analytics
-      h1 Pricing Table
-      p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis nisi harum aliquid sint deserunt.
-    .main-arrow
-      a(href="#pricing" class="arrow-down")
+    +header-text(
+      "Pricing Table",
+      "Social marketing & analytics",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis nisi harum aliquid sint deserunt.",
+      "h1"
+    )
+    .main__arrow
+      a.main__arrow_type_down(href="#pricing")
         img(src="img/down-arrow.png" alt="v")
       
   a(name="pricing")
   .pricing
-    .pricing-header
-      span.subtitle Misocial
-      h2 Select a Plan
-      p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis architecto amet alias quisquam tempore.
+    +header-text(
+      "Select a Plan",
+      "Misocial",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis nisi harum aliquid sint deserunt.",
+      "h2"
+    )(class='pricing__header')
     .pricing-cards
       .card
         img(src="img/first-card-cover.png" alt="first card")

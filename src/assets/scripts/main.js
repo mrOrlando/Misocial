@@ -1,6 +1,6 @@
 $(function() {
   var menu = $('.menu_platform_mobile');
-  var link = $('.m-menu-link');
+  var link = $('.main__menu-link');
   var close = $('.menu__link_type_close', menu);
 
   link.on('click', function(event) {
