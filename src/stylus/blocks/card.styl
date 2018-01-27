@@ -1,0 +1,47 @@
+@import "../common/mixins"
+@import "../common/variables"
+
+.card
+  display flex
+  flex-direction column
+  align-items center
+  justify-content space-between
+  width 440px
+  min-height 645px
+  padding 6rem
+  border 1px solid #d7dbe8
+  border-radius 2.7rem
+  transition all 0.3s linear
+  &:hover 
+    box-shadow 0px 0px 81.88px 10.12px rgba(204, 204, 223, 0.71)
+    border-color #fff
+  &__tariff 
+    font-size 1.4rem
+    text-transform uppercase
+    color #9fa4af
+    margin-top 4rem
+    font-weight bold
+  &__text
+    font-size 1.6rem
+    line-height 3rem
+    color #9fa4af
+    text-align center
+  &__button
+    buttonWithShadow()
+    padding 1.4rem 5.3rem
+    &:hover 
+      background bg-purple
+      color #fff
+      border-color bg-purple
+  .price 
+    position relative
+    font-weight 500
+    padding-left 1.5rem
+    color #4f4f6f
+    font-size 2rem
+    &__currency 
+      position absolute
+      left 0
+      top 1.8rem
+    &__value 
+      font-size 8rem

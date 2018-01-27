@@ -1,0 +1,10 @@
+mixin card(imgPath, noImgCaption, tariff, currency, value, time, text, buttonText )
+  .card
+    img(src= imgPath alt= noImgCaption)
+    span.card__tariff= tariff
+    .price
+      span.price__currency= currency
+      span.price__value= value
+      | /#{time}
+    p.card__text= text
+    button.card__button= buttonText

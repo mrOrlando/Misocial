@@ -1,6 +1,7 @@
 extends ../layout/main
 include ../blocks/menu
 include ../blocks/header-text
+include ../blocks/card
 
 block title
   | Pricing
@@ -33,40 +34,37 @@ block body
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis nisi harum aliquid sint deserunt.",
       "h2"
     )(class='pricing__header')
-    .pricing-cards
-      .card
-        img(src="img/first-card-cover.png" alt="first card")
-        span.tariff Personal
-        .price
-          span.currency $
-          span.value 0
-          | /month
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum illo fuga consectetur voluptatibus corporis
-          | voluptates ipsam mollitia aliquid est vitae distinctio reiciendis, ab veniam.
-        button Select plan
-      .card
-        img(src="img/second-card-cover.png" alt="first card")
-        span.tariff Personal
-        .price
-          span.currency $
-          span.value 29
-          | /month
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum illo fuga consectetur voluptatibus corporis
-          | voluptates ipsam mollitia aliquid est vitae distinctio reiciendis, ab veniam.
-        button Select plan
-      .card
-        img(src="img/second-card-cover.png" alt="first card")
-        span.tariff Personal
-        .price
-          span.currency $
-          span.value 49
-          | /month
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum illo fuga consectetur voluptatibus corporis
-          | voluptates ipsam mollitia aliquid est vitae distinctio reiciendis, ab veniam.
-        button Select plan
+    .pricing__cards
+      +card(
+        "img/first-card-cover.png",
+        "Personal card",
+        "Personal",
+        "$",
+        0,
+        "month",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum illo fuga consectetur voluptatibus corporis voluptates ipsam mollitia aliquid est vitae distinctio reiciendis, ab veniam.",
+        "Select plan"
+      )
+      +card(
+        "img/second-card-cover.png",
+        "Personal card",
+        "Personal",
+        "$",
+        29,
+        "month",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum illo fuga consectetur voluptatibus corporis voluptates ipsam mollitia aliquid est vitae distinctio reiciendis, ab veniam.",
+        "Select plan"
+      )
+      +card(
+        "img/third-card-cover.png",
+        "Personal card",
+        "Personal",
+        "$",
+        49,
+        "month",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum illo fuga consectetur voluptatibus corporis voluptates ipsam mollitia aliquid est vitae distinctio reiciendis, ab veniam.",
+        "Select plan"
+      )
 
   .call-to-action
     span socal marketing & analytics
