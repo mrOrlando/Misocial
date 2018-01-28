@@ -14,6 +14,8 @@ Also practice with:
 * Stylus
 * BEM
 
+You can [try it out here](https://mrorlando.github.io/Misocial/)
+
 Instructions how to launch this project:
 
 1. git clone https://github.com/mrOrlando/Misocial
