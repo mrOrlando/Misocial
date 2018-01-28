@@ -1,0 +1,26 @@
+@import "../common/mixins.styl"
+@import "../common/variables.styl"
+
+.call-to-action
+  padding 18rem
+  color #fff
+  text-align center
+  background-image linear-gradient(
+    -50deg,
+    rgb(136, 211, 206) 0%,
+    rgb(110, 69, 226) 100%
+  )
+  &__title
+    font-size 6rem
+    margin 0
+    font-weight 500
+    margin 1rem auto 2rem
+  &__button
+    buttonWithShadow()
+    width 19rem
+    height 5rem
+    margin 1rem
+    &:hover
+      background bg-purple
+      color #fff
+      border-color bg-purple
