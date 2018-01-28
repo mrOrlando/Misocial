@@ -2,6 +2,8 @@ extends ../layout/main
 include ../blocks/menu
 include ../blocks/header-text
 include ../blocks/card
+include ../blocks/social-links
+include ../blocks/footer
 
 block title
   | Pricing
@@ -14,7 +16,7 @@ block body
         img(src="img/logo.png" alt="Misocial")
       a(href="#" class="main__menu-link")
         i.fa.fa-bars
-      .main__menu_wrapper
+      .main__menu-wrapper
         +menu()(class='menu_theme_light')
     +header-text(
       "Pricing Table",
@@ -25,7 +27,7 @@ block body
     .main__arrow
       a.main__arrow_type_down(href="#pricing")
         img(src="img/down-arrow.png" alt="v")
-      
+
   a(name="pricing")
   .pricing
     +header-text(
@@ -72,22 +74,4 @@ block body
     button.call-to-action__button Get started
     button.call-to-action__button Explore features
 
-  .footer-wrap
-    .footer
-      .row
-        .logo
-          img(src="img/logo-black.png" alt="Misocial")
-        .footer-menu
-          +menu()(class="menu_theme_dark")
-      .line
-      .row
-        p.copy © 2017 Mass Impressions & Tranmautritam. Make the right impression.
-        .social-links
-          a(href="#")
-            i.fa.fa-facebook
-          a(href="#")
-            i.fa.fa-twitter
-          a(href="#")
-            i.fa.fa-google-plus
-          a(href="#")
-            i.fa.fa-instagram
+  +footer()
