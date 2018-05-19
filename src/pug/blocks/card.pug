@@ -1,6 +1,18 @@
-mixin card(imgPath, noImgCaption, tariff, currency, value, time, text, buttonText )
+mixin card(cfg = {})
+  -
+    var {
+      imgPath,
+      noImgCaption,
+      tariff,
+      currency,
+      value,
+      time,
+      text,
+      buttonText
+    } = cfg;
+
   .card
-    img(src= imgPath alt= noImgCaption)
+    img(src=imgPath alt=noImgCaption)
     span.card__tariff= tariff
     .price
       span.price__currency= currency

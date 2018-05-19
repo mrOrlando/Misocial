@@ -7,7 +7,7 @@ mixin social-links()
       { link: '#', type: 'instagram' },
     ];
 
-  .social-links
+  .social-links(class=attributes.class)
     each item in socials
       a.social-links__link(href=item.link)
         i.fa(class=`fa-${item.type}`)
