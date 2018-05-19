@@ -1,17 +1,18 @@
 mixin menu(isMobileVersion)
+  -
+    var menu = [
+      { link: '#', text: 'Home' },
+      { link: '#', text: 'Why MISOCIAL' },
+      { link: '#', text: 'Features' },
+      { link: '#', text: 'Articles' },
+      { link: '#', text: 'Pricing' },
+      { link: '#', text: 'Get Started', class: 'menu__link_type_button' },
+    ];
+
   ul.menu(class=attributes.class)
     if isMobileVersion
       li.menu__item
         a.menu__link.menu__link_type_close(href="#") &times;
-    li.menu__item
-      a.menu__link(href="#") Home
-    li.menu__item
-      a.menu__link(href="#") Why MISOCIAL
-    li.menu__item
-      a.menu__link(href="#") Features
-    li.menu__item
-      a.menu__link(href="#") Articles
-    li.menu__item
-      a.menu__link(href="#") Pricing
-    li.menu__item
-      a.menu__link.menu__link_type_button(href="#") Get Started
+    each item in menu
+      li.menu__item
+        a.menu__link(href=item.link class=item.class)= item.text

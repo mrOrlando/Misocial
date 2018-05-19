@@ -9,33 +9,32 @@ block title
   | Pricing
 
 block body
-  +menu(true)(class='menu_theme_light menu_platform_mobile')
+  +menu(true).menu_theme_light.menu_platform_mobile
   .main
     header.main__header
       .main__logo
-        img(src="img/logo.png" alt="Misocial")
-      a(href="#" class="main__menu-link")
+        img(src='img/logo.png' alt='Misocial')
+      a.main__menu-link(href='#')
         i.fa.fa-bars
       .main__menu-wrapper
-        +menu()(class='menu_theme_light')
-    +header-text(
-      "Pricing Table",
-      "Social marketing & analytics",
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis nisi harum aliquid sint deserunt.",
-      "h1"
-    )
+        +menu().menu_theme_light
+    +header-text({
+      titleLevel: 'h1',
+      title: 'Pricing Table',
+      subtitle: 'Social marketing & analytics',
+      text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis nisi harum aliquid sint deserunt.'
+    })
     .main__arrow
-      a.main__arrow_type_down(href="#pricing")
-        img(src="img/down-arrow.png" alt="v")
+      a.main__arrow_type_down(href='#pricing')
+        img(src='img/down-arrow.png' alt='v')
 
-  a(name="pricing")
+  a(name='pricing')
   .pricing
-    +header-text(
-      "Select a Plan",
-      "Misocial",
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis nisi harum aliquid sint deserunt.",
-      "h2"
-    )(class='pricing__header')
+    +header-text({
+      title: 'Select a Plan',
+      subtitle: 'Misocial',
+      text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis nisi harum aliquid sint deserunt.'
+    }).pricing__header.header-text_theme_dark
     .pricing__cards
       +card(
         "img/first-card-cover.png",
@@ -69,8 +68,11 @@ block body
       )
 
   .call-to-action
-    span.subtitle socal marketing & analytics
-    h4.call-to-action__title Take control of your data
+    +header-text({
+      titleLevel: 'h4',
+      title: 'Take control of your data',
+      subtitle: 'socal marketing & analytics'
+    })
     button.call-to-action__button Get started
     button.call-to-action__button Explore features
 

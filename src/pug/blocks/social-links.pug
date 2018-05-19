@@ -1,10 +1,13 @@
 mixin social-links()
+  -
+    var socials = [
+      { link: '#', type: 'facebook' },
+      { link: '#', type: 'twitter' },
+      { link: '#', type: 'google-plus' },
+      { link: '#', type: 'instagram' },
+    ];
+
   .social-links
-    a.social-links__link(href="#")
-      i.fa.fa-facebook
-    a.social-links__link(href="#")
-      i.fa.fa-twitter
-    a.social-links__link(href="#")
-      i.fa.fa-google-plus
-    a.social-links__link(href="#")
-      i.fa.fa-instagram
+    each item in socials
+      a.social-links__link(href=item.link)
+        i.fa(class=`fa-${item.type}`)

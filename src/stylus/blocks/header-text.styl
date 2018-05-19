@@ -2,9 +2,25 @@
   text-align center
   &__title
     margin 15px
-    font-size 8.6rem
+  &__subtitle
+    decorate()
+    font-size 1.4rem
+    text-transform uppercase
   &__text
     font-size 1.6rem
     display inline-block
     width 40rem
     line-height 3rem
+  &_theme
+    &_dark
+      .header-text
+        &__title
+          color title-dark-color
+          margin 0
+        &__subtitle
+          color decorate-dark-color
+          &::before
+          &::after
+            background bg-purple
+        &__text
+          color text-dark-color

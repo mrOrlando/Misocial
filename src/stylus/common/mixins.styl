@@ -16,3 +16,22 @@ buttonWithShadow() {
   border 1px solid btn-color
   box-shadow 0px 0px 18.69px 2.31px rgba(204, 204, 223, 0.5)
 }
+
+decorate()
+  &
+    display inline-block
+
+  &::before
+  &::after
+    content ''
+    height 1px
+    background decorate-light-color
+    width 30px
+    display inline-block
+    vertical-align middle
+
+  &::before
+    margin-right 15px
+
+  &::after
+    margin-left 15px

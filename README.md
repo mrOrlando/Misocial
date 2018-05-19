@@ -18,7 +18,7 @@ You can [try it out here](https://mrorlando.github.io/Misocial/)
 
 Instructions how to launch this project:
 
-1. git clone https://github.com/mrOrlando/Misocial
-2. cd Misocial
-3. yarn install
-4. gulp
+1.  git clone https://github.com/mrOrlando/Misocial
+2.  cd Misocial
+3.  yarn install
+4.  gulp

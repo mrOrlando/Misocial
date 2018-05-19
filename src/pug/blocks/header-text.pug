@@ -1,5 +1,14 @@
-mixin header-text(title, subtitle, text, titleLevel)
-    .header-text(class=attributes.class)
-      span.subtitle.header-text__subtitle= subtitle
-      #{titleLevel}.header-text__title= title
+mixin header-text(cfg = {})
+  -
+    var {
+      titleLevel = 'h2',
+      title,
+      subtitle,
+      text
+    } = cfg;
+
+  .header-text(class=attributes.class)
+    span.header-text__subtitle= subtitle
+    #{titleLevel}.header-text__title= title
+    if text
       p.header-text__text= text
