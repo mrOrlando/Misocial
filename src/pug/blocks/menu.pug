@@ -9,7 +9,7 @@ mixin menu(isMobileVersion)
       { link: '#', text: 'Get Started', class: 'menu__link_type_button' },
     ];
 
-  ul.menu(class=attributes.class)
+  ul.menu&attributes(attributes)
     if isMobileVersion
       li.menu__item
         a.menu__link.menu__link_type_close(href="#") &times;

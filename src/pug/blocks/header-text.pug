@@ -7,7 +7,7 @@ mixin header-text(cfg = {})
       text
     } = cfg;
 
-  .header-text(class=attributes.class)
+  .header-text&attributes(attributes)
     span.header-text__subtitle= subtitle
     #{titleLevel}.header-text__title= title
     if text
