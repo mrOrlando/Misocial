@@ -1,4 +1,19 @@
-/* fonts generate on https://www.fontsquirrel.com/tools/webfont-generator via Expert mode */
+/*
+
+fonts generate on https://www.fontsquirrel.com/tools/webfont-generator via Expert mode
+
+font-weight values:
+100	Thin (Hairline)
+200	Extra Light (Ultra Light)
+300	Light
+400	Normal
+500	Medium
+600	Semi Bold (Demi Bold)
+700	Bold
+800	Extra Bold (Ultra Bold)
+900	Black (Heavy)
+
+*/
 
 @font-face {
   font-family: 'Maven Pro';
