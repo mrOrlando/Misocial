@@ -1,0 +1,41 @@
+include ../blocks/header-text
+include ../blocks/card
+
+mixin pricing(cfg = {})
+  .pricing
+    +header-text({
+      title: 'Select a Plan',
+      subtitle: 'Misocial',
+      text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis nisi harum aliquid sint deserunt.'
+    }).pricing__header.header-text_theme_dark
+    .pricing__cards
+      +card({
+        imgPath: 'img/first-card-cover.png',
+        noImgCaption: 'Personal card',
+        tariff: 'Personal',
+        currency: '$',
+        value: 0,
+        time: 'month',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum illo fuga consectetur voluptatibus corporis voluptates ipsam mollitia aliquid est vitae distinctio reiciendis, ab veniam.',
+        buttonText: 'Select plan'
+      })
+      +card({
+        imgPath: 'img/second-card-cover.png',
+        noImgCaption: 'Personal card',
+        tariff: 'Personal',
+        currency: '$',
+        value: 29,
+        time: 'month',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum illo fuga consectetur voluptatibus corporis voluptates ipsam mollitia aliquid est vitae distinctio reiciendis, ab veniam.',
+        buttonText: 'Select plan'
+      })
+      +card({
+        imgPath: 'img/third-card-cover.png',
+        noImgCaption: 'Personal card',
+        tariff: 'Personal',
+        currency: '$',
+        value: 49,
+        time: 'month',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum illo fuga consectetur voluptatibus corporis voluptates ipsam mollitia aliquid est vitae distinctio reiciendis, ab veniam.',
+        buttonText: 'Select plan'
+      })

@@ -1,0 +1,11 @@
+include ../blocks/header-text
+
+mixin call-to-action(cfg = {})
+  .call-to-action
+    +header-text({
+      titleLevel: 'h4',
+      title: 'Take control of your data',
+      subtitle: 'socal marketing & analytics'
+    })
+    button.call-to-action__button Get started
+    button.call-to-action__button Explore features

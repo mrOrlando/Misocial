@@ -1,8 +1,8 @@
 extends ../layouts/main
 include ../blocks/menu
-include ../blocks/header-text
-include ../blocks/card
-include ../blocks/social-links
+include ../blocks/main
+include ../blocks/pricing
+include ../blocks/call-to-action
 include ../blocks/footer
 
 block title
@@ -10,70 +10,8 @@ block title
 
 block body
   +menu(true).menu_theme_light.menu_platform_mobile
-  .main
-    header.main__header
-      .main__logo
-        img(src='img/logo.png' alt='Misocial')
-      a.main__menu-link(href='#')
-        i.fa.fa-bars
-      .main__menu-wrapper
-        +menu().menu_theme_light
-    +header-text({
-      titleLevel: 'h1',
-      title: 'Pricing Table',
-      subtitle: 'Social marketing & analytics',
-      text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis nisi harum aliquid sint deserunt.'
-    })
-    .main__arrow
-      a.main__arrow_type_down(href='#pricing')
-        img(src='img/down-arrow.png' alt='v')
-
+  +main()
   a(name='pricing')
-  .pricing
-    +header-text({
-      title: 'Select a Plan',
-      subtitle: 'Misocial',
-      text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis nisi harum aliquid sint deserunt.'
-    }).pricing__header.header-text_theme_dark
-    .pricing__cards
-      +card({
-        imgPath: 'img/first-card-cover.png',
-        noImgCaption: 'Personal card',
-        tariff: 'Personal',
-        currency: '$',
-        value: 0,
-        time: 'month',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum illo fuga consectetur voluptatibus corporis voluptates ipsam mollitia aliquid est vitae distinctio reiciendis, ab veniam.',
-        buttonText: 'Select plan'
-      })
-      +card({
-        imgPath: 'img/second-card-cover.png',
-        noImgCaption: 'Personal card',
-        tariff: 'Personal',
-        currency: '$',
-        value: 29,
-        time: 'month',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum illo fuga consectetur voluptatibus corporis voluptates ipsam mollitia aliquid est vitae distinctio reiciendis, ab veniam.',
-        buttonText: 'Select plan'
-      })
-      +card({
-        imgPath: 'img/third-card-cover.png',
-        noImgCaption: 'Personal card',
-        tariff: 'Personal',
-        currency: '$',
-        value: 49,
-        time: 'month',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum illo fuga consectetur voluptatibus corporis voluptates ipsam mollitia aliquid est vitae distinctio reiciendis, ab veniam.',
-        buttonText: 'Select plan'
-      })
-
-  .call-to-action
-    +header-text({
-      titleLevel: 'h4',
-      title: 'Take control of your data',
-      subtitle: 'socal marketing & analytics'
-    })
-    button.call-to-action__button Get started
-    button.call-to-action__button Explore features
-
+  +pricing()
+  +call-to-action()
   +footer()

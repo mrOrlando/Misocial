@@ -1,0 +1,21 @@
+include ../blocks/menu
+include ../blocks/header-text
+
+mixin main(cfg = {})
+  .main
+    header.main__header
+      .main__logo
+        img(src='img/logo.png' alt='Misocial')
+      a.main__menu-link(href='#')
+        i.fa.fa-bars
+      .main__menu-wrapper
+        +menu().menu_theme_light
+    +header-text({
+      titleLevel: 'h1',
+      title: 'Pricing Table',
+      subtitle: 'Social marketing & analytics',
+      text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis nisi harum aliquid sint deserunt.'
+    })
+    .main__arrow
+      a.main__arrow_type_down(href='#pricing')
+        img(src='img/down-arrow.png' alt='v')

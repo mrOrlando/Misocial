@@ -1,11 +1,14 @@
+include ../blocks/menu
+include ../blocks/social-links
+
 mixin footer()
   .footer
     .footer__wrapper
       .row
         .logo
-          img(src="img/logo-black.png" alt="Misocial")
+          img(src='img/logo-black.png' alt='Misocial')
         .footer__menu
-          +menu()(class="menu_theme_dark")
+          +menu().menu_theme_dark
       .line
       .row
         p.footer__copy © 2017 Mass Impressions & Tranmautritam. Make the right impression.
