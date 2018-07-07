@@ -9,9 +9,12 @@
     "normalizecss": "^3.0.0"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
+    "gulp-babel": "^7.0.1",
     "gulp-main-npm-files": "^1.0.5",
     "gulp-notify": "^3.2.0",
     "gulp-pug": "^3.3.0",
