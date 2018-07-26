@@ -7,6 +7,8 @@ Landing page for Flexbox practice:
 - [Create Layout Part 3](https://www.youtube.com/watch?v=4g3Yd0YtPhg)
 - [Create Adaptive Layout Part 4](https://www.youtube.com/watch?v=qRogpo3Lp6s)
 
+The logic of working with JS is separated from the CSS classes based on code review in [this lesson](https://www.youtube.com/watch?v=Ihm8cmJ06mg).
+
 Also practice with:
 
 - Gulp

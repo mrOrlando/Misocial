@@ -9,10 +9,15 @@ mixin menu(isMobileVersion)
       { link: '#', text: 'Get Started', class: 'menu__link_type_button' },
     ];
 
+    if (isMobileVersion) {
+      attributes['data-js'] = 'mobile-menu';
+    }
+
   ul.menu&attributes(attributes)
     if isMobileVersion
       li.menu__item
-        a.menu__link.menu__link_type_close(href="#") &times;
+        button.menu__link.menu__link_type_close(data-js='close-menu')
+          i.fa.fa-times
     each item in menu
       li.menu__item
-        a.menu__link(href=item.link class=item.class)= item.text
+        a.menu__link(href=item.link class=item.class data-js='menu-link')= item.text

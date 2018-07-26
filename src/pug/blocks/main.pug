@@ -6,7 +6,7 @@ mixin main(cfg = {})
     header.main__header
       .main__logo
         img(src='img/logo.png' alt='Misocial')
-      a.main__menu-link(href='#')
+      button.main__open-menu(data-js='open-menu')
         i.fa.fa-bars
       .main__menu-wrapper
         +menu().menu_theme_light
@@ -18,4 +18,4 @@ mixin main(cfg = {})
     })
     .main__arrow
       a.main__arrow_type_down(href='#pricing')
-        img(src='img/down-arrow.png' alt='v')
+        img(src='img/down-arrow.png' alt='down')
