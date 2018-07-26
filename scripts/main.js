@@ -1,21 +1,35 @@
 'use strict';
 
 $(function () {
-  var menu = $('.menu_platform_mobile');
-  var link = $('.main__menu-link');
-  var close = $('.menu__link_type_close', menu);
+  var menu = $('[data-js="mobile-menu"]');
+  var openMenu = $('[data-js="open-menu"]');
+  var closeMenu = $('[data-js="close-menu"]', menu);
+  var menuLinks = $('[data-js="menu-link"]', menu);
 
-  link.on('click', function (event) {
+  openMenu.on('click', function (event) {
     event.preventDefault();
     menu.addClass('menu_active');
   });
 
-  close.on('click', function (event) {
+  closeMenu.on('click', function (event) {
     event.preventDefault();
     menu.removeClass('menu_active');
   });
 
-  $('a', menu).click(function () {
+  menuLinks.click(function () {
     menu.removeClass('menu_active');
   });
+
+  if (!menu.length) {
+    throw new Error('Could not find [data-js="mobile-menu"]');
+  }
+  if (!openMenu.length) {
+    throw new Error('Could not find [data-js="open-menu"]');
+  }
+  if (!closeMenu.length) {
+    throw new Error('Could not find [data-js="close-menu"]');
+  }
+  if (!menuLinks.length) {
+    throw new Error('Could not find [data-js="menu-link"]');
+  }
 });
