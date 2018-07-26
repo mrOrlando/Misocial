@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "gulp"
+  },
   "dependencies": {
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",

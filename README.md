@@ -21,7 +21,7 @@ Instructions how to launch this project:
 1.  git clone https://github.com/mrOrlando/Misocial
 2.  cd Misocial
 3.  npm install
-4.  gulp
+4.  npm start
 
 Requirements:
 
