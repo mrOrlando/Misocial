@@ -11,7 +11,7 @@ gulp.task('styl', function() {
   gulp
     .src('./src/stylus/app.styl')
     .pipe(sourcemaps.init())
-    .pipe(stylus({ include: 'node_modules' }))
+    .pipe(stylus({ include: 'node_modules', 'include css': true }))
     .on('error', notify.onError())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./build/css'));
@@ -47,12 +47,9 @@ gulp.task('copy-assets', function() {
 
 gulp.task('copy-npm-files', function() {
   gulp.src(mainNpmFiles()).pipe(gulp.dest('build/vendor'));
-  gulp
-    .src('./node_modules/normalizecss/normalize.css')
-    .pipe(gulp.dest('build/vendor'));
-  gulp
-    .src('./node_modules/font-awesome/css/font-awesome.min.css')
-    .pipe(gulp.dest('build/vendor'));
+  // gulp
+  //   .src('./node_modules/font-awesome/css/font-awesome.min.css')
+  //   .pipe(gulp.dest('build/vendor'));
 });
 
 gulp.task('build', function() {
