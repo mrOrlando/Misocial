@@ -12,6 +12,7 @@ The logic of working with JS is separated from the CSS classes based on code rev
 Also practice with:
 
 - Gulp
+- Webpack 4
 - Pug
 - Stylus
 - BEM
