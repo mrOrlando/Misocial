@@ -1,11 +1,9 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
-var mainNpmFiles = require('gulp-main-npm-files');
 var sourcemaps = require('gulp-sourcemaps');
 var stylus = require('gulp-stylus');
 var pug = require('gulp-pug');
 var notify = require('gulp-notify');
-var babel = require('gulp-babel');
 
 gulp.task('styl', function() {
   gulp
@@ -29,38 +27,17 @@ gulp.task('pug', function() {
     .pipe(gulp.dest('build'));
 });
 
-gulp.task('js', function() {
-  return gulp
-    .src('./src/scripts/*.js')
-    .pipe(
-      babel({
-        presets: [['env']],
-      })
-    )
-    .on('error', notify.onError())
-    .pipe(gulp.dest('build/scripts'));
-});
-
 gulp.task('copy-assets', function() {
   return gulp.src('./src/assets/**').pipe(gulp.dest('build'));
 });
 
-gulp.task('copy-npm-files', function() {
-  gulp.src(mainNpmFiles()).pipe(gulp.dest('build/vendor'));
-  // gulp
-  //   .src('./node_modules/font-awesome/css/font-awesome.min.css')
-  //   .pipe(gulp.dest('build/vendor'));
-});
-
 gulp.task('build', function() {
-  gulp.run(['styl', 'pug', 'js', 'copy-assets', 'copy-npm-files']);
+  gulp.run(['styl', 'pug', 'copy-assets']);
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./package.json', ['copy-npm-files']);
   gulp.watch('./src/stylus/**/*.styl', ['styl']);
   gulp.watch('./src/pug/**/*.pug', ['pug']);
-  gulp.watch('./src/scripts/**/*.js', ['js']);
   gulp.watch('./src/assets/**/*.*', ['copy-assets']);
 });
 

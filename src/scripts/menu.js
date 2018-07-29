@@ -1,4 +1,4 @@
-$(() => {
+export default () => {
   const menu = $('[data-js="mobile-menu"]');
   const openMenu = $('[data-js="open-menu"]');
   const closeMenu = $('[data-js="close-menu"]', menu);
@@ -30,4 +30,4 @@ $(() => {
   if (!menuLinks.length) {
     throw new Error('Could not find [data-js="menu-link"]');
   }
-});
+};
