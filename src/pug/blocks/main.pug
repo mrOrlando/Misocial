@@ -2,13 +2,13 @@ include ../blocks/menu
 include ../blocks/header-text
 
 mixin main(cfg = {})
-  .main
+  section.main
     header.main__header
       .main__logo
         img(src='img/logo.png' alt='Misocial')
       button.main__open-menu(data-js='open-menu')
         i.fa.fa-bars
-      .main__menu-wrapper
+      nav.main__menu-wrapper
         +menu().menu_theme_light
     +header-text({
       titleLevel: 'h1',
@@ -17,5 +17,5 @@ mixin main(cfg = {})
       text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis nisi harum aliquid sint deserunt.'
     })
     .main__arrow
-      a.main__arrow_type_down(href='#pricing')
+      a.main__arrow_type_down(href='#pricing' data-js='scroll-button')
         img(src='img/down-arrow.png' alt='down')

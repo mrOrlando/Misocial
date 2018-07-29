@@ -10,8 +10,10 @@ block title
 
 block body
   +menu(true).menu_theme_light.menu_platform_mobile
-  +main()
-  a(name='pricing')
-  +pricing()
-  +call-to-action()
-  +footer()
+  .page
+    .content
+      +main()
+      a(name='pricing')
+      +pricing()
+      +call-to-action()
+    +footer()

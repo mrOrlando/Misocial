@@ -5,3 +5,5 @@
 - [] Remove unused CSS code.
 - [x] Create vendor.js file.
 - [] Add autoprefixer plugin.
+- [x] Add smooth scrolling for the down arrow.
+- [] Add empty second page.
