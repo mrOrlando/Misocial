@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "watch:view": "gulp",
-    "watch:webpack": "webpack -w --mode development",
+    "watch:webpack": "webpack -w --mode production",
     "build:view": "gulp build",
     "build:js": "webpack --mode production",
     "build": "npm-run-all build:view build:js",

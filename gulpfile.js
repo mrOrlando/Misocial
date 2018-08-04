@@ -28,7 +28,10 @@ gulp.task('pug', function() {
 });
 
 gulp.task('copy-assets', function() {
-  return gulp.src('./src/assets/**').pipe(gulp.dest('build'));
+  gulp.src('./src/assets/**').pipe(gulp.dest('build'));
+  return gulp
+    .src('./node_modules/font-awesome/fonts/*')
+    .pipe(gulp.dest('build/fonts'));
 });
 
 gulp.task('build', function() {
