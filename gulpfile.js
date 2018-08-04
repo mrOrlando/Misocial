@@ -3,6 +3,7 @@ var browserSync = require('browser-sync').create();
 var sourcemaps = require('gulp-sourcemaps');
 var stylus = require('gulp-stylus');
 var autoprefixer = require('gulp-autoprefixer');
+var cleanCSS = require('gulp-clean-css');
 var pug = require('gulp-pug');
 var notify = require('gulp-notify');
 
@@ -12,6 +13,7 @@ gulp.task('styl', function() {
     .pipe(sourcemaps.init())
     .pipe(stylus({ include: 'node_modules', 'include css': true }))
     .pipe(autoprefixer())
+    .pipe(cleanCSS())
     .on('error', notify.onError())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./build/css'));
